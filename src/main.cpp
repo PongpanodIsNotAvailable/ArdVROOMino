@@ -69,20 +69,21 @@ void loop() {
     voltWaterTemp = a2*0.0049;
 
     // waterTempC = 1/(0.0014237 + 0.00024618*(1) + 0.00000010892 * (1));
+    // ignoring the water temp for now
     
     a3 = analogRead(A3);    // fuel pressure
     fuelPresBar = (a3 * 0.0049 - 0.5) * 0.65;
     
 
-    // Serial.print(currentSample);
-    // Serial.print(",");
-    // Serial.print(a0);
-    // Serial.print(",");
-    // Serial.print(a1);
-    // Serial.print(",");
-    // Serial.print(",");
-    // Serial.print(a2);
-    // Serial.println(a3);    
+    Serial.print(currentSample);
+    Serial.print(",");
+    Serial.print(a0);
+    Serial.print(",");
+    Serial.print(a1);
+    Serial.print(",");
+    Serial.print(",");
+    Serial.print(a2);
+    Serial.println(a3);    
 }
   
   
