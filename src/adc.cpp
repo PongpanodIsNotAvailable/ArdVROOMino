@@ -66,13 +66,13 @@ void loop() {
     voltTPS = a1*0.0049;
     
     a2 = analogRead(A2);    // Water Temp
-    voltWaterTemp = a2*0.0049;
+    voltWaterTemp = (a2*0.0049 - 0.7)*66.67;
 
     // waterTempC = 1/(0.0014237 + 0.00024618*(1) + 0.00000010892 * (1));
     // ignoring the water temp for now
     
     a3 = analogRead(A3);    // fuel pressure
-    fuelPresBar = (a3 * 0.0049 - 0.5) * 0.65;
+    fuelPresBar = (a3 * 0.0049) * 4.5;
     
 
     Serial.print(currentSample);
